@@ -168,6 +168,7 @@ static struct cable_hw_map {
 	char	*cable_path;
 	char	tck, tms, tdi, tdo;
 	char	cbus_led;
+	char    cbus_tdo; 	// EP: Flea FPGA Ohm support
 } cable_hw_map[] = {
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -178,7 +179,8 @@ static struct cable_hw_map {
 		.tms =		0x80,
 		.tdi =		0x08,
 		.tdo =		0x40,
-		.cbus_led =	0x02
+		.cbus_led =	0x02,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -189,7 +191,8 @@ static struct cable_hw_map {
 		.tms =		0x80,
 		.tdi =		0x08,
 		.tdo =		0x40,
-		.cbus_led =	0x02
+		.cbus_led =	0x02,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -200,7 +203,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -211,7 +215,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -222,7 +227,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -233,7 +239,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -244,7 +251,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -255,7 +263,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -266,7 +275,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -277,7 +287,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -288,7 +299,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -299,7 +311,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -310,7 +323,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -321,7 +335,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -332,7 +347,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -343,7 +359,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -354,7 +371,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -365,7 +383,8 @@ static struct cable_hw_map {
 		.tms =		0x40,
 		.tdi =		0x80,
 		.tdo =		0x08,
-		.cbus_led =	0x00
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x00
 	},
 	{
 		.cable_hw = 	CABLE_HW_USB,
@@ -376,7 +395,20 @@ static struct cable_hw_map {
 		.tms =		0x08,
 		.tdi =		0x02,
 		.tdo =		0x04,
-		.cbus_led =	0x10
+		.cbus_led =	0x10,
+		.cbus_tdo = 0x00
+	},
+	{	// EP: FleaFPGA
+		.cable_hw = CABLE_HW_USB,
+		.usb_vid = 	0x0403,
+		.usb_pid =	0x6015,
+		.cable_path = "FleaFPGA v2.5",
+		.tck =      0x08,
+		.tms =      0x01, // 0x04,
+		.tdi =      0x04, // 0x01,
+		.tdo =      0x00,
+		.cbus_led =	0x00,
+		.cbus_tdo = 0x02	 // CB1 on CBUS
 	},
 	{
 		.cable_hw =	CABLE_HW_UNKNOWN,
@@ -384,14 +416,15 @@ static struct cable_hw_map {
 	}
 };
 
-
-#define	USB_BAUDS		1000000
+// EP lowered USB BAUDS for fleaFPGA Ohm
+#define	USB_BAUDS		250000 // 1000000
 
 #define	USB_TCK			(hmp->tck)
 #define	USB_TMS			(hmp->tms)
 #define	USB_TDI			(hmp->tdi)
-#define	USB_TDO			(hmp->tdo)
-#define	USB_CBUS_LED		(hmp->cbus_led)
+#define	USB_TDO			(hmp->tdo ? hmp->tdo : hmp->cbus_tdo)
+#define USB_CBUS_TDO    (hmp->cbus_tdo)
+#define	USB_CBUS_LED	(hmp->cbus_led)
 
 #define	PPI_TCK			0x02
 #define	PPI_TMS			0x04
@@ -454,6 +487,10 @@ static int ppi;			/* Parallel port handle */
 #endif
 #endif
 
+// EP: Copied from FleaFPGA-JTAG-linux
+static unsigned	ftdi_status;	// EP: perhaps should be ULONG
+#define	FT_CHECK(x)	(ftdi_status = (x), (ftdi_status >= 0 ? 0 : printf("FTDI: %s returned %d in %s:%d: %s\n", #x, (int32_t)ftdi_status, __FUNCTION__, __LINE__, ftdi_get_error_string(&fc))))
+
 
 /* ms_sleep() sleeps for at least the number of milliseconds given as arg */
 #define	ms_sleep(delay_ms)	usleep((delay_ms) * 1000)
@@ -479,6 +516,10 @@ static int
 set_port_mode(int mode)
 {
 	int res = 0;
+
+	// EP: debugging output
+    if (global_debug)
+        printf("EP: set_port_mode %s\n", mode == PORT_MODE_ASYNC ? "ASYNC" : "SYNC");
 
 	/* No-op if already in requested mode, or not using USB */
 	if (!need_led_blink &&
@@ -519,7 +560,11 @@ set_port_mode(int mode)
 
 		res = FT_SetBitMode(ftHandle,
 #else
-		res = ftdi_set_bitmode(&fc,
+		// EP: For Flea Ohm need to change to CBUS
+		if (USB_CBUS_TDO) {
+			res = ftdi_set_bitmode(&fc, USB_TCK | USB_TMS | USB_TDI, BITMODE_BITBANG);
+		} else 
+		  res = ftdi_set_bitmode(&fc,
 #endif
 		    USB_TCK | USB_TMS | USB_TDI | led_state,
 		    BITMODE_SYNCBB | (BITMODE_CBUS * (USB_CBUS_LED != 0)));
@@ -538,9 +583,23 @@ set_port_mode(int mode)
 			ms_sleep(10);
 		}
 #else
-		do {
-			res = ftdi_read_data(&fc, &txbuf[0], sizeof(txbuf));
-		} while (res == sizeof(txbuf));
+		// EP: For Flea Ohm need to change to CBUS
+		if (USB_CBUS_TDO) {
+			if (global_debug) printf("EP: CBUS TDO 1\n");
+			FT_CHECK(ftdi_set_bitmode(&fc, 0, BITMODE_CBUS));
+            // Read a single byte here.
+            FT_CHECK(ftdi_read_pins(&fc, &txbuf[0]));
+            // EP: Change back to regular bit bang mode
+            if (USB_CBUS_TDO) {
+                FT_CHECK(ftdi_set_bitmode(&fc, USB_TCK | USB_TMS | USB_TDI, BITMODE_BITBANG));
+                                          // BITMODE_SYNCBB));
+            }
+        } else {
+            do {
+                res = ftdi_read_data(&fc, &txbuf[0], sizeof(txbuf));
+                if (global_debug) printf("EP: CBUS TDO 1, read %d bytes\n",res);
+            } while (res == sizeof(txbuf));
+        }
 #endif
 		break;
 
@@ -858,6 +917,7 @@ set_tms_tdi(int tms, int tdi)
 			val |= USB_TDI;
 		txbuf[txpos++] = val;
 		txbuf[txpos++] = val | USB_TCK;
+        txbuf[txpos++] = val;   // EP: bring to low too
 	} else { /* PPI */
 		if (tms)
 			val |= PPI_TMS;
@@ -881,6 +941,8 @@ send_generic(int bits, char *tdi, char *tdo, char *mask)
 {
 	int res, i, bitpos, tdomask, tdoval, maskval, val = 0, txval = 0;
 	int rxpos, rxlen;
+    if (global_debug)
+        printf("EP: send_generic(bits=%d, tdi=%s, ... )\n", bits, tdi);
 
 	if (cable_hw == CABLE_HW_USB)
 		tdomask = USB_TDO;
@@ -945,18 +1007,44 @@ send_generic(int bits, char *tdi, char *tdo, char *mask)
 	set_tms_tdi(0, txval);
 
 	/* Send / receive data on JTAG port */
+    if (global_debug)
+        printf("EP: going to commit(0)\n");
 	res = commit(0);
 
 	/* Translate received bitstream into hex, apply mask, store in tdi */
 	if (port_mode == PORT_MODE_SYNC) {
+		{
+            if (global_debug)
+                printf("EP: came here, rxlen=%d rxpos=%d tdomask=%02X\n", rxlen, rxpos, tdomask);
+/*
+			for(int j=0; j<82; j+=4) {
+				for (int x=0; x<4; x++) {
+					if (j+x<82)
+						printf("%02X ", txbuf[j+x]);
+				}
+				printf("\n");
+			}
+ */
+		}
 		if (mask != NULL)
 			mask += strlen(tdi);
 		if (tdo != NULL)
 			tdo += strlen(tdi);
 		tdi += strlen(tdi);
 		val = 0;
-		for (i = rxpos, bits = 0; bits < rxlen; i += 2) {
-			val += (((txbuf[i] & tdomask) != 0) << (bits & 0x3));
+        // 41111043
+        // D0444410 - if shifted left by 2 we get:
+        // 41111040
+        // 34111104
+		//for (i = rxpos, bits = 0; bits < rxlen; i += 2) {
+        for (i = rxpos, bits = 0; bits < rxlen; i += 3) {
+            int ep_offset = 1-2*3; // was 1
+            if (rxpos + ep_offset < 0)
+                printf("EP: Buffer position negative, oh no!\n");
+            if (global_debug)
+                printf("EP: txbuf[%d]=%02X txbuf[%d]=%02X val=%1X\n", i+ep_offset, txbuf[i+ep_offset],
+                       i+ep_offset+1, txbuf[i+ep_offset+1], val);
+			val += (((txbuf[i+ep_offset] & tdomask) != 0) << (bits & 0x3));
 			bits++;
 			if ((bits & 0x3) == 0 || bits == rxlen) {
 				if (mask != NULL) {
@@ -1031,14 +1119,28 @@ send_ir(int bits, char *tdi, char *tdo, char *mask)
 	return (res);
 }
 
+#define EPTEST 1
 
 static int
 commit_usb(void)
 {
 	int txchunklen, res, i;
+    if (global_debug)
+        printf("EP: commit_usb, txpos=%d\n", txpos);
 
 	for (i = 0; i < txpos; i += txchunklen) {
 		txchunklen = txpos - i;
+		// EP Test code start
+		if(EPTEST && port_mode == PORT_MODE_SYNC && USB_CBUS_TDO) {
+            // EP: set txchucklen to 3, so that we send three bytes:
+            //  TMS & TDI with clock low
+            //  TMS & TDI with clock high
+            //  TMS & TDI with clock low again, so that we can safely transition to CBUS read
+            txchunklen = 3;
+            // txchunklen = 1;
+			// printf("%02X ", txbuf[i]);
+		}
+		// EP Test code end
 		if (port_mode == PORT_MODE_SYNC && txchunklen > USB_BUFLEN_SYNC)
 			txchunklen = USB_BUFLEN_SYNC;
 #ifdef WIN32
@@ -1056,11 +1158,23 @@ commit_usb(void)
 			FT_Read(ftHandle, &txbuf[i], txchunklen,
 			    (DWORD *) &res);
 #else
-			int rep = 0;
-			for (res = 0; res < txchunklen && rep < 8;
-			    rep++) {
-				res += ftdi_read_data(&fc, &txbuf[i],
-				    txchunklen - res);
+			// EP: For Flea Ohm need to change to CBUS
+			if (EPTEST && USB_CBUS_TDO) {
+				// if (global_debug) printf("EP: CBUS TDO 2\n");
+				FT_CHECK(ftdi_set_bitmode(&fc, 0, BITMODE_CBUS));
+				FT_CHECK(ftdi_read_pins(&fc, &txbuf[i]));
+				FT_CHECK(ftdi_set_bitmode(&fc, USB_TCK | USB_TMS | USB_TDI, BITMODE_BITBANG));
+                if (global_debug)
+                    printf(" RD:%02X\n", txbuf[i]);
+			} else {
+				// EP: For other than CBUS read devices
+				int rep = 0;
+				FT_CHECK(ftdi_set_bitmode(&fc, USB_TCK | USB_TMS | USB_TDI, BITMODE_SYNCBB | BITMODE_CBUS));
+				for (res = 0; res < txchunklen && rep < 8;
+					rep++) {
+					res += ftdi_read_data(&fc, &txbuf[i],
+						txchunklen - res);
+				}
 			}
 #endif
 			if (res != txchunklen) {
@@ -1504,6 +1618,7 @@ exec_svf_tokenized(int tokc, char *tokv[])
 		for (i = 0; i < repeat; i++) {
 			txbuf[txpos++] = 0;
 			txbuf[txpos++] = USB_TCK;
+            txbuf[txpos++] = 0; // EP added
 			if (txpos >= sizeof(txbuf) / 2) {
 				commit(0);
 				if (need_led_blink)
@@ -2864,7 +2979,18 @@ async_read_block(int len)
 			else
 				res = 0;
 #else
+			// EP: For Flea Ohm need to change to CBUS
+			if (USB_CBUS_TDO) {
+				if (global_debug) printf("EP: CBUS TDO 3\n");
+				FT_CHECK(ftdi_set_bitmode(&fc, 0, BITMODE_CBUS));
+			}
 			res = ftdi_read_data(&fc, &rxbuf[got], len - got);
+			// EP: Change back to regular bit bang mode
+			if (USB_CBUS_TDO) {
+				FT_CHECK(ftdi_set_bitmode(&fc, 
+					USB_TCK | USB_TMS | USB_TDI | led_state,
+					BITMODE_SYNCBB | (BITMODE_CBUS * (USB_CBUS_LED != 0))));
+			}
 #endif
 		} else {
 #ifdef WIN32
@@ -3919,7 +4045,18 @@ term_emul(void)
 				rx_cnt = fc.readbuffer_remaining;
 			if (rx_cnt > BUFLEN_MAX)
 				rx_cnt = BUFLEN_MAX;
+			// EP: For Flea Ohm need to change to CBUS
+			if (USB_CBUS_TDO) {
+				if (global_debug) printf("EP: CBUS TDO 4\n");
+				FT_CHECK(ftdi_set_bitmode(&fc, 0, BITMODE_CBUS));
+			}
 			rx_cnt = ftdi_read_data(&fc, txbuf, rx_cnt);
+			// EP: Change back to regular bit bang mode
+			if (USB_CBUS_TDO) {
+				FT_CHECK(ftdi_set_bitmode(&fc, 
+					USB_TCK | USB_TMS | USB_TDI | led_state,
+					BITMODE_SYNCBB | (BITMODE_CBUS * (USB_CBUS_LED != 0))));
+			}
 		} else {
 			rx_cnt = read(com_port, txbuf, rx_cnt);
 			if (rx_cnt == -1)
@@ -4290,8 +4427,8 @@ main(int argc, char *argv[])
 	}
 
 	do {
-		if (reload) {
 			genbrk();
+		if (reload) {
 			reload = 0;
 		}
 		if (argc)
